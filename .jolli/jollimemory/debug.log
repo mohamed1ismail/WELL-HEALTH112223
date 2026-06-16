@@ -1,0 +1,119 @@
+[2026-06-16T20:12:07.627Z] INFO  [activate] Activating JolliMemory extension {"workspaceRoot":"c:\\Users\\narut\\OneDrive\\Desktop\\WELL-HEALTH11222-main","extensionPath":"c:\\Users\\narut\\.antigravity-ide\\extensions\\jolli.jollimemory-vscode-0.99.1-universal"}
+[2026-06-16T20:12:08.085Z] INFO  [initialLoad] Loading all panels
+[2026-06-16T20:12:08.101Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:08.179Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:08.333Z] INFO  [plans] detectPlans found 0 plans (0 in registry)
+[2026-06-16T20:12:08.417Z] INFO  [notes] detectNotes found 0 notes (0 in registry)
+[2026-06-16T20:12:08.429Z] WARN  [SummaryStore] loadIndex: index.json unreadable from hr (fresh repo or backend read failed)
+[2026-06-16T20:12:08.813Z] INFO  [KBPathResolver] KB folder initialized: C:\Users\narut\Documents\jolli\WELL-HEALTH11222 (remote=https://github.com/mohamed1ismail/WELL-HEALTH11222.git)
+[2026-06-16T20:12:09.485Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:09.485Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:09.583Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:09.583Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:09.806Z] INFO  [bridge] Merged mode activated {"branch":"main","creationPoint":"1ddddb6d","author":"mohamed1ismail"}
+[2026-06-16T20:12:10.161Z] INFO  [StorageFactory] StorageFactory.create: storageMode=dual-write, projectPath=c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:10.377Z] INFO  [StorageFactory] Storage mode: dual-write (primary=orphan, shadow=folder)
+[2026-06-16T20:12:10.490Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T20:12:10.937Z] INFO  [Installer] Status: enabled=false, claude=true, git=false, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:10.940Z] INFO  [initialLoad] All panels loaded — updating status bar
+[2026-06-16T20:12:10.940Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:10.955Z] INFO  [Installer] Status: enabled=false, claude=true, git=false, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:10.958Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:10.969Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T20:12:11.187Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:11.205Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:11.210Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:11.230Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:11.383Z] INFO  [Installer] Status: enabled=false, claude=true, git=false, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:11.385Z] INFO  [Installer] Status: enabled=false, claude=true, git=false, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:11.402Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:11.569Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:11.590Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:11.704Z] INFO  [Installer] Status: enabled=false, claude=true, git=false, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:11.704Z] INFO  [activate] Auto-enabling Jolli Memory (no opt-out recorded)
+[2026-06-16T20:12:11.704Z] INFO  [bridge] enable() called
+[2026-06-16T20:12:11.704Z] INFO  [Installer] Installing Jolli Memory hooks
+[2026-06-16T20:12:11.780Z] INFO  [DispatchScripts] Wrote resolve-dist-path, run-hook, and run-cli scripts to C:\Users\narut\.jolli\jollimemory
+[2026-06-16T20:12:11.783Z] INFO  [DistPathWriter] Wrote dist-paths/antigravity-ide (version=0.99.1, distDir=c:\Users\narut\.antigravity-ide\extensions\jolli.jollimemory-vscode-0.99.1-universal\dist)
+[2026-06-16T20:12:11.823Z] INFO  [GitHookInstaller] Git post-commit hook installed
+[2026-06-16T20:12:11.826Z] INFO  [GitHookInstaller] Git post-rewrite hook installed
+[2026-06-16T20:12:11.829Z] INFO  [GitHookInstaller] Git prepare-commit-msg hook installed
+[2026-06-16T20:12:11.835Z] INFO  [Installer] Installation complete
+[2026-06-16T20:12:11.835Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:12.034Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:12.055Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:12.206Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T20:12:12.207Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T20:12:12.440Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T20:12:12.459Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T20:12:12.579Z] INFO  [Installer] Status: enabled=true, claude=true, git=true, geminiHook=true, worktreeHooks=true, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=1, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T21:31:40.945Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T21:31:41.032Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T21:31:41.581Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T21:31:41.652Z] INFO  [PostCommitHook] Enqueued: type=commit hash=5c6cdece
+[2026-06-16T21:31:41.652Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T21:31:41.657Z] INFO  [QueueWorker] Background worker spawned (PID: 30200)
+[2026-06-16T21:38:05.862Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T21:38:05.922Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T21:38:06.456Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T21:38:06.505Z] INFO  [PostCommitHook] Enqueued: type=commit hash=563d3e2b
+[2026-06-16T21:38:06.505Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T21:38:06.509Z] INFO  [QueueWorker] Background worker spawned (PID: 28592)
+[2026-06-16T21:51:29.640Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T21:51:29.699Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T21:51:30.122Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T21:51:30.179Z] INFO  [PostCommitHook] Enqueued: type=commit hash=75784085
+[2026-06-16T21:51:30.180Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T21:51:30.185Z] INFO  [QueueWorker] Background worker spawned (PID: 8908)
+[2026-06-16T21:59:13.152Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T21:59:13.207Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T21:59:13.741Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T21:59:13.820Z] INFO  [PostCommitHook] Enqueued: type=commit hash=c0d0eece
+[2026-06-16T21:59:13.820Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T21:59:13.825Z] INFO  [QueueWorker] Background worker spawned (PID: 28872)
+[2026-06-16T22:01:13.401Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T22:01:13.438Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T22:01:13.999Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T22:01:14.130Z] INFO  [PostCommitHook] Enqueued: type=commit hash=51bb62b7
+[2026-06-16T22:01:14.130Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T22:01:14.144Z] INFO  [QueueWorker] Background worker spawned (PID: 27884)
+[2026-06-16T22:02:09.529Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T22:02:09.641Z] INFO  [plans] detectPlans found 0 plans (0 in registry)
+[2026-06-16T22:02:09.700Z] INFO  [notes] detectNotes found 0 notes (0 in registry)
+[2026-06-16T22:02:09.966Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T22:02:10.038Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T22:02:10.241Z] INFO  [bridge] Merged mode activated {"branch":"HEAD","creationPoint":"1ddddb6d","author":"mohamed1ismail"}
+[2026-06-16T22:02:10.846Z] INFO  [Installer] Status: enabled=true, claude=false, git=true, geminiHook=false, worktreeHooks=false, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=0, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T22:05:38.070Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T22:05:38.107Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T22:05:38.338Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T22:05:38.415Z] INFO  [plans] detectPlans found 0 plans (0 in registry)
+[2026-06-16T22:05:38.460Z] INFO  [notes] detectNotes found 0 notes (0 in registry)
+[2026-06-16T22:05:38.478Z] INFO  [PostCommitHook] Detected operation: rebase
+[2026-06-16T22:05:38.479Z] INFO  [PostCommitHook] Rebase in progress — skipping (post-rewrite will handle)
+[2026-06-16T22:05:38.580Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T22:05:38.596Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T22:05:38.664Z] INFO  [Installer] Checking Jolli Memory status
+[2026-06-16T22:05:38.744Z] INFO  [plans] detectPlans found 0 plans (0 in registry)
+[2026-06-16T22:05:38.790Z] INFO  [notes] detectNotes found 0 notes (0 in registry)
+[2026-06-16T22:05:38.803Z] INFO  [Installer] Status: enabled=true, claude=false, git=true, geminiHook=false, worktreeHooks=false, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=0, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T22:05:38.842Z] INFO  [PostRewriteHook] === Post-rewrite hook started (command: rebase) ===
+[2026-06-16T22:05:38.897Z] INFO  [SessionTracker] Enqueued git operation: type=rebase-pick hash=97364bb7 file=1781647538895-97364bb7.json
+[2026-06-16T22:05:38.897Z] INFO  [PostRewriteHook] rebase-pick enqueued: [51bb62b7] → 97364bb7
+[2026-06-16T22:05:38.897Z] INFO  [PostRewriteHook] Rebase: enqueued 1 group(s) from 1 mapping(s)
+[2026-06-16T22:05:38.898Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T22:05:38.903Z] INFO  [QueueWorker] Background worker spawned (PID: 15528)
+[2026-06-16T22:05:38.903Z] INFO  [PostRewriteHook] === Post-rewrite hook finished ===
+[2026-06-16T22:05:38.926Z] INFO  [CodexDiscoverer] Discovered 0 Codex session(s)
+[2026-06-16T22:05:38.942Z] INFO  [OpenCodeDiscoverer] Discovered 0 OpenCode session(s) for c:\Users\narut\OneDrive\Desktop\WELL-HEALTH11222-main
+[2026-06-16T22:05:39.031Z] INFO  [Installer] Status: enabled=true, claude=false, git=true, geminiHook=false, worktreeHooks=false, sessions=0, summaries=0, codex=true/true, gemini=true/true, enabledWorktrees=0, opencode=true/true, cursor=true/true, copilot=false/true, copilotChat=true
+[2026-06-16T22:05:39.049Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T22:05:39.157Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T22:05:39.237Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T22:05:39.331Z] WARN  [SummaryStore] loadIndex: index.json unreadable from Rd (fresh repo or backend read failed)
+[2026-06-16T22:12:00.148Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook started (source: message) ===
+[2026-06-16T22:12:00.184Z] INFO  [PrepareMsgHook] === Prepare-commit-msg hook finished ===
+[2026-06-16T22:12:00.495Z] INFO  [PostCommitHook] Detected operation: commit
+[2026-06-16T22:12:00.553Z] INFO  [PostCommitHook] Enqueued: type=commit hash=0e2051ea
+[2026-06-16T22:12:00.553Z] INFO  [QueueWorker] Launching background worker
+[2026-06-16T22:12:00.557Z] INFO  [QueueWorker] Background worker spawned (PID: 11908)
