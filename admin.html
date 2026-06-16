@@ -2593,7 +2593,12 @@
 
     function saveAdminCredentials() {
       var adminUser = document.getElementById('settings-admin-username').value.trim() || 'admin';
-      var adminPass = document.getElementById('settings-admin-password').value || 'wellhealth123';
+      var adminPass = document.getElementById('settings-admin-password').value;
+      if (!adminPass || adminPass.length < 4) {
+        showToast(isAR() ? 'كلمة المرور يجب أن تكون 4 أحرف على الأقل' : 'Password must be at least 4 characters');
+        return;
+      }
+      // Cache locally for offline fallback only
       localStorage.setItem('wh_admin_username', adminUser);
       localStorage.setItem('wh_admin_password', adminPass);
       syncSettings();
@@ -2608,14 +2613,14 @@
         if (s.email && document.getElementById('settings-email')) document.getElementById('settings-email').value = s.email;
       } catch (e) { }
 
-      // Load admin credentials
+      // Load admin credentials (username only, password left blank for security)
       var adminUser = localStorage.getItem('wh_admin_username') || 'admin';
-      var adminPass = localStorage.getItem('wh_admin_password') || 'wellhealth123';
       if (document.getElementById('settings-admin-username')) {
         document.getElementById('settings-admin-username').value = adminUser;
       }
       if (document.getElementById('settings-admin-password')) {
-        document.getElementById('settings-admin-password').value = adminPass;
+        document.getElementById('settings-admin-password').value = '';
+        document.getElementById('settings-admin-password').placeholder = '••••••••';
       }
     }
 

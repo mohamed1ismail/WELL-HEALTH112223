@@ -36,42 +36,19 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    .fade-in {
-      animation: fadeIn 0.5s ease forwards;
-    }
+    .fade-in { animation: fadeIn 0.5s ease forwards; }
 
     @keyframes shake {
-
-      0%,
-      100% {
-        transform: translateX(0)
-      }
-
-      20%,
-      60% {
-        transform: translateX(-8px)
-      }
-
-      40%,
-      80% {
-        transform: translateX(8px)
-      }
+      0%,  100% { transform: translateX(0);  }
+      20%, 60%  { transform: translateX(-8px); }
+      40%, 80%  { transform: translateX(8px);  }
     }
 
-    .shake {
-      animation: shake 0.4s ease;
-    }
+    .shake { animation: shake 0.4s ease; }
   </style>
 </head>
 
@@ -122,16 +99,16 @@
         </div>
 
         <!-- Error msg -->
-        <p id="error-msg" class="text-[#ba1a1a] text-sm items-center gap-2" style="display:none">
+        <p id="error-msg" class="text-[#ba1a1a] text-sm flex items-center gap-2" style="display:none">
           <span class="material-symbols-outlined text-[16px]">error</span>
-          <span>اسم المستخدم أو كلمة المرور غلط</span>
+          <span id="error-text">اسم المستخدم أو كلمة المرور غلط</span>
         </p>
 
         <!-- Submit -->
-        <button type="submit"
+        <button type="submit" id="submit-btn"
           class="w-full py-3 bg-[#4CAF50] text-white rounded-xl font-bold text-sm tracking-widest hover:opacity-90 active:scale-95 transition-all shadow-md shadow-[#4CAF50]/20 flex items-center justify-center gap-2">
           <span class="material-symbols-outlined text-[18px]">login</span>
-          SIGN IN
+          <span id="btn-text">SIGN IN</span>
         </button>
       </form>
     </div>
@@ -141,52 +118,78 @@
 
   <script src="config.js"></script>
   <script>
-    // Credentials — change these dynamically
-    const CREDENTIALS = { username: 'admin', password: 'wellhealth123' };
-
     var API_BASE = getApiBase();
 
-    async function loadCredentials() {
-      try {
-        const res = await fetch(API_BASE + '/api/admin/credentials');
-        if (res.ok) {
-          const data = await res.json();
-          if (data.username) CREDENTIALS.username = data.username;
-          if (data.password) CREDENTIALS.password = data.password;
-          // Sync to local storage for offline/cached fallback
-          localStorage.setItem('wh_admin_username', CREDENTIALS.username);
-          localStorage.setItem('wh_admin_password', CREDENTIALS.password);
-        }
-      } catch (e) {
-        console.log('Using cached/local credentials');
-        CREDENTIALS.username = localStorage.getItem('wh_admin_username') || 'admin';
-        CREDENTIALS.password = localStorage.getItem('wh_admin_password') || 'wellhealth123';
-      }
+    // If already logged in, go straight to admin
+    if (sessionStorage.getItem('wh_auth') === 'true' || localStorage.getItem('wh_auth') === 'true') {
+      window.location.href = 'admin.html';
     }
 
-    loadCredentials();
-
-    function handleLogin(e) {
+    async function handleLogin(e) {
       e.preventDefault();
-      const user = document.getElementById('username').value.trim();
-      const pass = document.getElementById('password').value;
-      const errMsg = document.getElementById('error-msg');
-      const form = document.getElementById('login-form');
 
-      if (user === CREDENTIALS.username && pass === CREDENTIALS.password) {
-        sessionStorage.setItem('wh_auth', 'true');
-        localStorage.setItem('wh_auth', 'true'); // backup for file:// protocol
-        window.location.href = 'admin.html';
-      } else {
+      var user = document.getElementById('username').value.trim();
+      var pass = document.getElementById('password').value;
+      var errMsg = document.getElementById('error-msg');
+      var errText = document.getElementById('error-text');
+      var form = document.getElementById('login-form');
+      var btn = document.getElementById('submit-btn');
+      var btnText = document.getElementById('btn-text');
+
+      if (!user || !pass) {
+        errText.textContent = 'يرجى إدخال اسم المستخدم وكلمة المرور';
         errMsg.style.display = 'flex';
-        form.classList.add('shake');
-        setTimeout(() => form.classList.remove('shake'), 400);
+        return;
+      }
+
+      // Show loading state
+      btn.disabled = true;
+      btnText.textContent = 'جاري التحقق...';
+      errMsg.style.display = 'none';
+
+      try {
+        var res = await fetch(API_BASE + '/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: user, password: pass })
+        });
+
+        var data = await res.json();
+
+        if (res.ok && data.success) {
+          // Logged in successfully — never store password in localStorage
+          sessionStorage.setItem('wh_auth', 'true');
+          localStorage.setItem('wh_auth', 'true');
+          window.location.href = 'admin.html';
+        } else {
+          errText.textContent = data.error || 'اسم المستخدم أو كلمة المرور غلط';
+          errMsg.style.display = 'flex';
+          form.classList.add('shake');
+          setTimeout(function () { form.classList.remove('shake'); }, 400);
+        }
+      } catch (err) {
+        // Offline fallback: use localStorage cached credentials
+        var cachedUser = localStorage.getItem('wh_admin_username') || 'admin';
+        var cachedPass = localStorage.getItem('wh_admin_password') || 'wellhealth123';
+        if (user === cachedUser && pass === cachedPass) {
+          sessionStorage.setItem('wh_auth', 'true');
+          localStorage.setItem('wh_auth', 'true');
+          window.location.href = 'admin.html';
+        } else {
+          errText.textContent = 'تعذر الاتصال بالسيرفر';
+          errMsg.style.display = 'flex';
+          form.classList.add('shake');
+          setTimeout(function () { form.classList.remove('shake'); }, 400);
+        }
+      } finally {
+        btn.disabled = false;
+        btnText.textContent = 'SIGN IN';
       }
     }
 
     function togglePass() {
-      const input = document.getElementById('password');
-      const icon = document.getElementById('eye-icon');
+      var input = document.getElementById('password');
+      var icon = document.getElementById('eye-icon');
       if (input.type === 'password') {
         input.type = 'text';
         icon.innerText = 'visibility_off';
@@ -194,11 +197,6 @@
         input.type = 'password';
         icon.innerText = 'visibility';
       }
-    }
-
-    // If already logged in, go straight to admin
-    if (sessionStorage.getItem('wh_auth') === 'true' || localStorage.getItem('wh_auth') === 'true') {
-      window.location.href = 'admin.html';
     }
   </script>
 </body>
